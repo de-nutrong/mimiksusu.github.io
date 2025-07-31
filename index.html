@@ -1,1 +1,80 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Instagram, Facebook } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function BritishChefPortfolio() {
+  return (
+    <main className="p-6 max-w-4xl mx-auto space-y-8">
+      <header className="text-center space-y-2">
+        <motion.h1
+          className="text-4xl font-bold"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Chef Arthur Kensington
+        </motion.h1>
+        <p className="text-muted-foreground text-lg">
+          Traditional British Cuisine with a Modern Twist
+        </p>
+      </header>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card>
+          <CardContent className="p-4 space-y-2">
+            <h2 className="text-xl font-semibold">About Me</h2>
+            <p>
+              Born and raised in Yorkshire, Chef Arthur has spent over two decades
+              mastering the art of British cooking. From rustic pub classics to
+              Michelin-inspired creations, every dish is a celebration of tradition
+              and innovation.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-4 space-y-2">
+            <h2 className="text-xl font-semibold">Signature Dishes</h2>
+            <ul className="list-disc list-inside">
+              <li>Beef Wellington with Truffle Mash</li>
+              <li>Sticky Toffee Pudding</li>
+              <li>Smoked Haddock Kedgeree</li>
+              <li>Modernized Shepherd's Pie</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card>
+          <CardContent className="p-4 space-y-2">
+            <h2 className="text-xl font-semibold">Experience</h2>
+            <ul className="list-disc list-inside">
+              <li>Head Chef at The Crown & Pheasant, London (2016–Present)</li>
+              <li>Michelin Star Apprentice, Gordon Ramsay Restaurants</li>
+              <li>Private Culinary Consultant, British Embassy Events</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-4 space-y-2">
+            <h2 className="text-xl font-semibold">Contact</h2>
+            <div className="space-y-2">
+              <Button variant="outline" className="w-full justify-start">
+                <Mail className="mr-2 h-4 w-4" /> arthur@kensingtonchef.uk
+              </Button>
+              <Button variant="outline" className="w-full justify-start">
+                <Instagram className="mr-2 h-4 w-4" /> @kensingtonchef
+              </Button>
+              <Button variant="outline" className="w-full justify-start">
+                <Facebook className="mr-2 h-4 w-4" /> facebook.com/kensingtonchef
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+    </main>
+  );
+}
 
